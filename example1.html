@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+       body {
+         font-family: Arial, sans-serif;
+         
+           margin:0;
+            padding:0;
+            background-color:rgb(187, 160, 160);
+            text-align: center;
+         }
+         h2:hover{
+          color:rgb(153, 212, 141);
+          font-style: oblique;
+         }
+        h2{
+          position: relative;
+          left: 500px;
+          bottom: 30px;
+        }
+        .about {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      gap:30px;
+      text-align:center;
+    }
+    .about img {
+      width:250px;
+      height: 250px;
+      border-radius:50%;
+      object-fit: cover;
+     
+      position: relative;
+      top: 150px;
+      right: 5px;
+    }
+    .about img:hover{
+      padding: 2px;
+       box-shadow: 0 4px 12px black;
+    }
+    .about p {
+      max-width: 500px;
+      font-size: 19px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      animation: moveBox 3s infinite;
+     position: relative;
+     left: 35px;
+     top: 30px;
+    font-size: large;
+    }
+    .about div:hover{
+      padding: 2px;
+      background-color: rgb(114, 165, 165);
+      box-shadow: 5px 5px 5px black;
+       }
+      .back-btn {
+          display: inline-block;
+          margin-top: 20px;
+          padding: 10px 20px;
+          background: #333;
+          color: white;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: 0.3s;
+          
+       }
+        .back-btn:hover {
+          background-color: darkgreen;
+       }
+       .box1 {
+      width: 400px;
+      height: 250px;
+      background: lightcoral;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border-radius: 10px;
+      position: relative;
+      top:200px;
+      left: 100px;
+      
+      
+    }
+        .box2 {
+      width: 200px;
+      height: 100px;
+      background:gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: step-end;
+      border: 3px double;
+    }
+    .box1:hover + .box2 {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      position: relative;
+      top:400px;
+      right: 200px;
+
+    }
+    </style>
+</head>
+<body>
+    <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="ashapicture.jpg" >
+    <div class="box1">Hello! I’m Asha Kumar, a Python Full Stack Developer with experience in HTML, 
+      CSS, JavaScript,React,and Django.I focus on building clean,
+       responsive,and user-friendly web applications,
+       and I’m always eager to learn new technologies to enhance my skills.</div>
+       <div class="box2">Thanks for visit👍🏻</div>
+      <a href="portfolio.html" class="back-btn"><i class="fa-solid fa-house"></i></a>
+  </section>
+</body>
+</html>
