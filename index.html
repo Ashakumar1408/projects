@@ -11,6 +11,22 @@
       padding: 0;
       background-image: url(port.jpg);
     }
+    @media (max-width: 768px) {
+      nav {
+        height: auto;
+        gap: 30px;
+        flex-direction: row;
+      }
+    }
+      @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 10px;
+        height: auto;
+      }
+      }
     nav {
       background: #333;
       padding: 15px;
