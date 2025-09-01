@@ -1,67 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-    <style>
-       body {
-         font-family: Arial, sans-serif;
-      background-color: #e0ccff;
-           margin:0;
-            padding:0;
-         }
-        .a {
-          display: inline-block;
-         
-          padding: 10px 20px;
-          background: #333;
-          color: white;
-          text-decoration: none;
-          border-radius: 8px;
-          transition: 0.3s;
-          position: relative;
-          
-         left: 1200px;
-          bottom: 350px;
-        }
-       .a:hover {
-          background-color:rgb(160, 160, 216);
-       }
-        .cv {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>My CV</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0ccff, #dbe7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
       text-align: center;
     }
-    .cv h2{
-     position: relative;
-     top: 130px;
+
+    .cv {
+      background: #fff;
+      padding: 50px 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      max-width: 600px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
     }
+
+    .cv h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #3c2a4d;
+    }
+
+    .cv p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
     .cv a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
+      padding: 12px 22px;
       border-radius: 30px;
-      background: rgb(77, 184, 77);
-      color:rgb(253, 250, 250);
+      background: #6a0dad;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       transition: 0.3s;
-      margin-top: 200px;
     }
     .cv a:hover {
-      background:rgb(77, 184, 77);
-      transform: scale(1.05);
-      
+      background: #9b59ff;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-    </style>
+
+    .a {
+      display: inline-block;
+      padding: 12px 16px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .a:hover {
+      background: #6a0dad;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+   
+    @media (max-width: 600px) {
+      .cv {
+        padding: 30px 20px;
+      }
+      .cv h2 {
+        font-size: 26px;
+      }
+      .cv p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section id="cv" class="cv">
-      <h2>My CV <br><p style="font-size:large; color:brown;">Download my CV to know more about my skills, education, and projects.<hr></p></h2>
-      
-      <a href="Asha.pdf" target="_blank">📄 View CV</a> |
-      <a href="Asha.pdf" download>⬇ Download CV</a>
-    </section>
-    <a  class="a" href="index.html" ><i class="fa-solid fa-house"></i></a>
+  <section id="cv" class="cv">
+    <h2>My CV</h2>
+    <p>Download my CV to know more about my <b>skills, education, and projects.</b></p>
+    <a href="Asha.pdf" target="_blank">📄 View CV</a>
+    <a href="Asha.pdf" download>⬇ Download CV</a>
+  </section>
+
+  <a class="a" href="index.html"><i class="fa-solid fa-house"></i></a>
 </body>
 </html>
