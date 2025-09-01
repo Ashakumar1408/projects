@@ -9,49 +9,87 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url(port.jpg);
+       background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
     }
-    @media (max-width: 768px) {
-      nav {
-        height: auto;
-        gap: 30px;
-        flex-direction: row;
-      }
+
+    /* Heading */
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #fff;
+      font-size: 2.5rem;
+      text-transform: uppercase;
     }
-      @media (max-width: 480px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 10px;
-        height: auto;
-      }
-      }
+    h1:hover {
+      color: gold;
+      text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+      font-style: italic;
+    }
+
+    /* Navbar */
     nav {
-      background: #333;
-      padding: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
       display: flex;
-      height: 130px;
       justify-content: center;
       gap: 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
     }
-   h1{
-    text-align: center
-   }
-   h1:hover{
-    color:grey;
-    text-shadow:10px 5px 5px darkslategray;
-    font-style: italic;
-   }
+
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-     position: relative;
-     top: 50px;
+      font-size: 1.1rem;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    /* Attractive hover underline */
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: gold;
+      transition: width 0.3s ease;
     }
     nav a:hover {
-      color:gold;
+      color: gold;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -59,10 +97,9 @@
   <h1>My Portfolio</h1>
 
   <nav>
-    
     <a href="example1.html">About</a>
     <a href="example2.html">Project</a>
-    <a href="example3.html">Cv</a>
+    <a href="example3.html">CV</a>
     <a href="example4.html">Contact</a>
   </nav>
 
