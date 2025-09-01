@@ -1,131 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-    <style>
-       body {
-         font-family: Arial, sans-serif;
-         
-           margin:0;
-            padding:0;
-            background-color:rgb(187, 160, 160);
-            text-align: center;
-         }
-         h2:hover{
-          color:rgb(153, 212, 141);
-          font-style: oblique;
-         }
-        h2{
-          position: relative;
-          left: 500px;
-          bottom: 30px;
-        }
-        .about {
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:center;
-      gap:30px;
-      text-align:center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+      color: #333;
     }
-    .about img {
-      width:250px;
-      height: 250px;
-      border-radius:50%;
-      object-fit: cover;
-     
-      position: relative;
-      top: 150px;
-      right: 5px;
-    }
-    .about img:hover{
-      padding: 2px;
-       box-shadow: 0 4px 12px black;
-    }
-    .about p {
-      max-width: 500px;
-      font-size: 19px;
-      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      animation: moveBox 3s infinite;
-     position: relative;
-     left: 35px;
-     top: 30px;
-    font-size: large;
-    }
-    .about div:hover{
-      padding: 2px;
-      background-color: rgb(114, 165, 165);
-      box-shadow: 5px 5px 5px black;
-       }
-      
-      .a {
-          display: inline-block;
-         
-          padding: 10px 20px;
-          background: #333;
-          color: white;
-          text-decoration: none;
-          border-radius: 8px;
-          transition: 0.3s;
-          margin-top:50px;
-        }
-       .a:hover {
-          background-color:rgb(160, 160, 216);
-       }
-       .box1 {
-      width: 400px;
-      height: 250px;
-      background: lightcoral;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      border-radius: 10px;
-      position: relative;
-      top:200px;
-      left: 100px;
-      
-      
-    }
-        .box2 {
-      width: 200px;
-      height: 100px;
-      background:gray;
+
+    /* Section Layout */
+    .about {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-top: 10px;
-      opacity: 0;
-      visibility: hidden;
-      transition: step-end;
-      border: 3px double;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .box1:hover + .box2 {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      position: relative;
-      top:400px;
-      right: 200px;
 
+    /* Heading */
+    .about h2 {
+      width: 100%;
+      font-size: 36px;
+      margin-bottom: 20px;
+      position: relative;
+      text-align: center;
     }
-    </style>
+
+    .about h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #2563eb;
+      margin: 10px auto;
+      border-radius: 2px;
+      animation: underline 2s infinite;
+    }
+
+    @keyframes underline {
+      0% { width: 0; }
+      50% { width: 80px; }
+      100% { width: 0; }
+    }
+
+    /* Profile Image */
+    .about img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    .about img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* About Text */
+    .about-text {
+      max-width: 500px;
+      background: white;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      animation: slideIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Hover Box */
+    .thanks-box {
+      margin-top: 20px;
+      background: #2563eb;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.4s ease;
+      display: inline-block;
+    }
+
+    .about-text:hover .thanks-box {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Home Button */
+    .home-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 18px;
+      background: #111827;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .home-btn:hover {
+      background: #16a34a;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+      .about h2 {
+        font-size: 28px;
+      }
+      .about img {
+        width: 200px;
+        height: 200px;
+      }
+      .about-text {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about h2 {
+        font-size: 24px;
+      }
+      .about-text p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section id="about" class="about">
+  <section id="about" class="about">
     <h2>About Me</h2>
-    <img src="ashapicture.jpg" >
-    <div class="box1">Hello! I’m Asha Kumar, a Python Full Stack Developer with experience in HTML, 
-      CSS, JavaScript,React,and Django.I focus on building clean,
-       responsive,and user-friendly web applications,
-       and I’m always eager to learn new technologies to enhance my skills.</div>
-       <div class="box2">Thanks for visit👍🏻</div>
-      <a href="index.html" class="a"><i class="fa-solid fa-house"></i></a>
+    <img src="ashapicture.jpg" alt="Profile Picture">
+    <div class="about-text">
+      <p>
+        Hello! I’m <strong>Asha Kumar</strong>, a passionate <strong>Python Full Stack Developer</strong> 
+        skilled in HTML, CSS, JavaScript, React, and Django.  
+        I specialize in building clean, responsive, and user-friendly web applications, 
+        and I’m always excited to learn and explore new technologies.
+      </p>
+      <div class="thanks-box">Thanks for visiting 👍🏻</div>
+      <br>
+      <a class="home-btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    </div>
   </section>
 </body>
 </html>
