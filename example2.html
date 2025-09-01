@@ -1,99 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-    <style>
-       body {
-         font-family: Arial, sans-serif;
-          
-           margin:0;
-            padding:0;
-          background-color:rgb(187, 180, 224);
-         }
-        .projects {
-      display: flex;
-      flex-direction: column;
-     
-      gap: 50px;
-     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f6f0ff, #dce7ff);
     }
-    h2{
+ h2 {
       text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #3c2a4d;
+      margin: 30px 0;
     }
-    .a {
-          display: inline-block;
-          margin-top: 20px;
-          padding: 10px 20px;
-          background: #333;
-          color: white;
-          text-decoration: none;
-          border-radius: 8px;
-          transition: 0.3s;
-          position: relative;
-         bottom: 880px ;
-         left: 1200px;
-          
-          
-       }
-        .a:hover {
-          background-color:rgb(160, 160, 216);
-       }
-      
-    .project1 {
-      background:white;
+.projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-     position: relative;
-     left: 400px;
-      background-color:rgb(236, 228, 152);
+      justify-items: center;
+    }
+.a {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #3c2a4d;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 18px;
+    }
+    .a:hover {
+      background-color: #7a5af5;
+    }
+
+    .project1 {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 500px;
+      max-width: 90%;
       text-align: center;
     }
     .project1:hover {
-      transform: translateY(-5px);
-      background-color: floralwhite;
-      box-shadow: 5px 10px 15px gray;
+      transform: translateY(-8px);
+      background-color: #f7f4ff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
     }
-    h3{
-      color:darkred;
+
+    h3 {
+      color: #6a0dad;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+   
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .projects {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
-    </style>
+  </style>
 </head>
 <body>
-    <section id="projects">
-    <h2>Projects📚</h2>
+  <section id="projects">
+    <h2>Projects 📚</h2>
     <div class="projects">
       <div class="project1">
         <h3>Project 1</h3>
-        <p><b>To-Do list</b>-A simple web application that allows users to add, edit, 
-          mark complete, and delete tasks to manage daily activities efficiently</p>
+        <p><b>To-Do list</b> - A simple web application that allows users to add, edit, 
+          mark complete, and delete tasks to manage daily activities efficiently.</p>
       </div>
       <div class="project1">
         <h3>Project 2</h3>
-        <p><b>Simple adventure game</b>-A text-based Python adventure game.
-Players make choices to explore different paths and outcomes.
-Showcases Python basics like loops, functions, and conditionals. </p>
+        <p><b>Simple adventure game</b> - A text-based Python adventure game.
+        Players make choices to explore different paths and outcomes.
+        Showcases Python basics like loops, functions, and conditionals.</p>
       </div>
       <div class="project1">
         <h3>Project 3</h3>
-        <p><b>Simple calculator</b>-A basic Python program to perform arithmetic operations.
-It allows users to add, subtract, multiply, and divide numbers.
-Built using Python with simple functions and user input.</p>
+        <p><b>Simple calculator</b> - A basic Python program to perform arithmetic operations.
+        It allows users to add, subtract, multiply, and divide numbers.
+        Built using Python with simple functions and user input.</p>
       </div>
       <div class="project1">
-        <h3>Project 3</h3>
-        <p><b>File Organizer</b>-A script to organize files into folders by type.
-Automatically sorts documents, images, and videos.
-Uses Python’s os and shutil modules.</p>
+        <h3>Project 4</h3>
+        <p><b>File Organizer</b> - A script to organize files into folders by type.
+        Automatically sorts documents, images, and videos.
+        Uses Python’s os and shutil modules.</p>
       </div>
     </div>
-    <a href="index.html" class="a"><i class="fa-solid fa-house"></i></a>
+    <a class="a" href="index.html"><i class="fa-solid fa-house"></i></a>
   </section>
 </body>
 </html>
+
