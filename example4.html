@@ -1,93 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-    <style>
-         body {
-         font-family: Arial, sans-serif;
-          background:#f9f9f9;
-           margin:0;
-            padding:0;
-            background-color:cadetblue;
-         }
-        .a {
-          display: inline-block;
-         
-          padding: 10px 20px;
-          background: #333;
-          color: white;
-          text-decoration: none;
-          border-radius: 8px;
-          transition: 0.3s;
-          position: relative;
-          
-         left: 1200px;
-          bottom: 350px;
-        }
-       .a:hover {
-          background-color:rgb(160, 160, 216);
-       }
-        .contact {
-      text-align: center;
-      position: relative;
-      top: 150px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+      color: #fff;
     }
+
+    .contact {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .contact h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+
     .contact a {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin: 10px;
-      padding: 12px 20px;
+      gap: 10px;
+      margin: 12px;
+      padding: 14px 24px;
       border-radius: 30px;
-      color:white;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 15px;
       transition: all 0.3s ease;
-      margin-top: 80px;
-    }
-    .contact a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 0.8s forwards;
     }
 
-   
-    .contact a.email { background: #555; }
-    .contact a.github { background: #24292e; }
-    .contact a.linkedin { background: #0077b5; }
+    .contact a i {
+      font-size: 1.2rem;
+    }
+
+    .contact a.email { 
+      background: #555;
+       animation-delay: 0.2s; 
+      }
+    .contact a.github {
+       background: #24292e;
+        animation-delay: 0.4s;
+       }
+    .contact a.linkedin { 
+      background: #0077b5;
+       animation-delay: 0.6s;
+       }
     .contact a.instagram {
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      animation-delay: 0.8s;
     }
-    footer { 
-        background:#333;
-         color:#fff;
-          text-align:center;
-           padding:15px 0; 
-           margin-top:270px;
-           height: 150px;
-         }
-    </style>
+
+    .contact a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.4);
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+    @media (max-width: 768px) {
+      .contact h2 {
+        font-size: 2rem;
+      }
+      .contact a {
+        font-size: 0.9rem;
+        padding: 12px 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact h2 {
+        font-size: 1.6rem;
+      }
+      .contact a {
+        display: block;
+        width: 80%;
+        margin: 12px auto;
+        font-size: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section id="contact" class="contact">
+  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <a class="email" href="mailto:ashakumar.developer@gmail.com" >
-  <span class="icon"></span>Email
-</a>
 
-    <a class="github" href="https://github.com/Ashakumar1408"  >
-      <span class="icon"></span>GitHub</a>
-    <a class="linkedin" href="https://www.linkedin.com/in/asha-kumar-59769235a" >
-      <span class="icon"></span>LinkedIn</a>
-    <a class="instagram"href="https://www.instagram.com/miii_.axh_/?hl=en" >
-      <span class="insta-icon"></span> Instagram
-    </a>
+    <a class="email" href="mailto:ashakumar.developer@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+<a class="github" href="https://github.com/Ashakumar1408" ><i class="fa-brands fa-github"></i>GitHub</a>
+<a class="linkedin" href="https://www.linkedin.com/in/asha-kumar-59769235a" ><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+<a class="instagram" href="https://www.instagram.com/miii_.axh_/?hl=en" ><i class="fa-brands fa-instagram"></i>Instagram</a>
   </section>
-    <a  class="a" href="index.html" ><i class="fa-solid fa-house"></i></a>
-   <footer>
+
+  <footer>
     <p>© 2025 My Portfolio. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
